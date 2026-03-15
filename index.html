@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <!-- PWA -->
+    <link rel="manifest" href="/nsca-cis/manifest.json" />
+    <meta name="theme-color" content="#2563eb" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NSCA CIS" />
+    <link rel="apple-touch-icon" href="/nsca-cis/icon-192.png" />
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="NSCA CIS" />
+    <!-- SEO -->
+    <meta name="description" content="Hệ thống quản trị thông minh Ngôi Sao Châu Á" />
+    <meta property="og:title" content="NSCA CIS" />
+    <meta property="og:description" content="Company Intelligence System" />
+    <title>NSCA CIS — Company Intelligence System</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { height: 100%; overflow: hidden; }
+      body {
+        background: #050810;
+        color: #fff;
+        font-family: Calibri, 'Segoe UI', sans-serif;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
+      #root { min-height: 100vh; min-height: 100dvh; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/nsca-cis/sw.js')
+            .then(r => console.log('SW registered:', r.scope))
+            .catch(e => console.log('SW error:', e));
+        });
+      }
+    </script>
+  </body>
+</html>

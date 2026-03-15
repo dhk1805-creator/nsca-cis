@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/api/ai",      "destination": "/api/ai.js"      },
+    { "source": "/api/remind",  "destination": "/api/remind.js"  },
+    { "source": "/api/extract", "destination": "/api/extract.js" },
+    { "source": "/(.*)",        "destination": "/index.html"     }
+  ]
+}

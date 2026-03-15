@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "framework": null,
+  "installCommand": "echo skip",
+  "buildCommand": "echo skip",
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/api/ai",      "destination": "/api/ai.js"      },
+    { "source": "/api/remind",  "destination": "/api/remind.js"  },
+    { "source": "/api/extract", "destination": "/api/extract.js" }
+  ]
+}
